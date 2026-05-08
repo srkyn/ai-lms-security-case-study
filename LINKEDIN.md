@@ -1,7 +1,3 @@
-# LinkedIn Project Copy
-
-Use this wording instead of posting or attaching the confidential report.
-
 ## Project Title
 
 AI/LMS Security Assessment Case Study
