@@ -1,143 +1,79 @@
 # AI/LMS Security Assessment Case Study
 
-Sanitized case study of an authorized AI assistant security assessment in a
+Public case study from an authorized assessment of an AI assistant embedded in a
 learning-management environment.
 
-This repository is intentionally public-safe. It does not include the original
-confidential report, target URLs, institution names, student data, exploit
-strings, screenshots of private systems, or vendor-specific implementation
-details.
+The confidential report stays private. This repository keeps the reusable parts:
+scope, control questions, finding categories, remediation patterns, and redaction
+discipline.
 
-![Sanitized assessment summary](docs/assets/ai-lms-assessment-summary.svg)
+![Assessment summary](docs/assets/ai-lms-assessment-summary.svg)
 
-![Sanitized assessment workflow](docs/assets/assessment-workflow.svg)
+## What This Shows
 
-## Summary
+- How I scoped an AI/LMS assessment
+- Which control areas I tested
+- How findings were translated into remediation
+- How portfolio evidence can be shared without exposing private systems
 
-The assessment reviewed an AI assistant embedded in an LMS course environment.
-Testing focused on how the assistant handled user context, tool access, system
-instructions, external requests, uploaded files, and stored knowledge.
+## Assessment Areas
 
-The private report was delivered to the authorized stakeholders. This public
-case study preserves the security lessons while removing operational details
-that could identify or expose the environment.
+| Area | Review Question |
+|---|---|
+| Tool access | Can the assistant call external services, platform APIs, or messaging tools beyond the user's expectation? |
+| Instruction hierarchy | Can user-editable instructions weaken system or platform controls? |
+| Safety configuration | Are guardrails admin-owned, default-on, and hard to bypass from a normal session? |
+| LMS context | What user, role, course, and document data enters the AI session automatically? |
+| Retrieval | Are knowledge sources scoped by owner, course, role, and document sensitivity? |
+| Memory | Can prior session content or uploaded material cross boundaries? |
+| Messaging | Can the assistant send trusted communications without review? |
 
-## Repository Contents
+## Sanitized Findings
+
+| Area | Risk Pattern | Primary Fix |
+|---|---|---|
+| External tools | Outbound requests could include sensitive session context | Restrict destinations, methods, and data classes; require user approval |
+| Instruction control | User-authored instructions could steer behavior beyond intended scope | Keep user instructions below platform and system controls |
+| Safety settings | Protective controls were exposed or weakly enforced | Make safety settings admin-owned and regression tested |
+| Self-disclosure | Assistant responses could reveal internal behavior and attack paths | Reduce unnecessary introspection and test for disclosure patterns |
+| LMS integration | Platform context was broader than needed for the task | Minimize injected context and enforce role-aware scopes |
+| Shared knowledge | Retrieval boundaries could expose inappropriate documents | Add document-level ownership and course-section scoping |
+| Messaging tools | Trusted-session messages could be abused | Require review before sending from a platform identity |
+
+## Recommended Controls
+
+- Allowlist external tools by domain, method, and approved data type.
+- Require visible user approval when requests include session or LMS context.
+- Log tool calls with actor, destination, method, time, and sanitized metadata.
+- Keep user-authored instructions below system and platform instructions.
+- Make safety controls admin-owned, default-on, and covered by regression tests.
+- Scope LMS retrieval by owner, course, role, section, and document sensitivity.
+- Review generated messages before sending from a trusted identity.
+
+## Public Boundary
+
+Published:
+
+- Assessment workflow
+- Control matrix
+- Redaction standard
+- Sanitized report template
+- LinkedIn-ready project copy
+
+Withheld:
+
+- Confidential report and evidence
+- Target URLs, tenant IDs, course IDs, and organization names
+- Exploit prompts, payloads, screenshots, tokens, headers, and internal endpoints
+- Student, staff, document, message, or academic-record data
+
+## Documents
 
 - [Assessment workflow](docs/assessment-workflow.md)
 - [Control matrix](docs/control-matrix.md)
 - [Public redaction standard](docs/redaction-standard.md)
 - [Sanitized report template](docs/report-template.md)
-- [LinkedIn-safe project copy](LINKEDIN.md)
+- [LinkedIn project copy](LINKEDIN.md)
 
-## What Was Assessed
-
-- AI chat behavior in an authenticated student-style session
-- Tool access boundaries for outbound HTTP and platform integrations
-- Custom assistant configuration controls
-- Prompt and instruction hierarchy behavior
-- User context passed from the LMS into the AI session
-- File upload and retrieval behavior
-- Shared knowledge-base exposure risks
-
-## Methodology
-
-The assessment used OWASP Top 10 for LLM Applications as the primary framework,
-with additional checks for:
-
-- Prompt injection and instruction override
-- Tool abuse and excessive agency
-- External data exfiltration paths
-- Sensitive information disclosure
-- Insecure output and response handling
-- Cross-session memory behavior
-- Excessive user context exposure
-- Retrieval-augmented generation data boundaries
-
-## Sanitized Finding Categories
-
-| Area | Risk Pattern | Why It Matters |
-|---|---|---|
-| External tool access | AI could make outbound requests without sufficient restriction | Sensitive session data may leave the platform |
-| Instruction control | User-configurable instructions could override intended behavior | Users may alter assistant behavior beyond intended scope |
-| Safety configuration | Guardrail controls were exposed or weakly scoped | Protective controls may not apply consistently |
-| Self-disclosure | Assistant could reveal internal behavior and attack surface | Attackers gain a map of useful abuse paths |
-| LMS integration | Platform APIs and user context were visible to the assistant | AI scope may exceed user expectations |
-| Shared knowledge | Documents were retrievable across inappropriate boundaries | Personal or academic data may be exposed |
-| Messaging tools | Communication tools could be abused from a trusted session | Phishing and impersonation risk increases |
-
-## Key Lessons
-
-1. **Tool access needs policy, not just availability.**
-   AI tools that can send HTTP requests, read memory, or call platform APIs need
-   allowlists, user confirmation, logging, and scoped credentials.
-
-2. **Custom instructions must not become system instructions.**
-   User-editable prompts should not override platform safety behavior or create
-   persistent control paths.
-
-3. **The LMS context boundary matters.**
-   Names, roles, cohorts, course IDs, documents, and messages are sensitive when
-   automatically injected into AI context.
-
-4. **RAG data needs ownership rules.**
-   Knowledge bases should enforce document-level access controls and prevent one
-   user from retrieving another user's personal material.
-
-5. **AI security findings need plain-language remediation.**
-   The most useful report is not a list of clever prompts. It is a clear map of
-   which controls failed, what data was at risk, and how to reduce exposure.
-
-## Recommended Controls
-
-- Restrict outbound HTTP tools to approved domains and methods.
-- Require visible user approval for external requests that include session data.
-- Log AI tool calls with destination, method, caller, and sanitized payload metadata.
-- Separate user-authored instructions from system and developer instructions.
-- Disable any user-facing option that bypasses platform safety context.
-- Enforce least-privilege API scopes for LMS integrations.
-- Remove personal documents from shared retrieval stores unless access control is explicit.
-- Add document-level ownership and course-section scoping to AI retrieval.
-- Review generated messages before sending from a trusted identity or platform session.
-- Add security regression tests for prompt injection, tool misuse, and data boundary failures.
-
-## Public Artifact Boundary
-
-The public case study is intentionally narrower than the private report. It is
-meant to show:
-
-- assessment planning
-- control thinking
-- risk communication
-- remediation structure
-- responsible redaction
-
-It is not meant to show:
-
-- exploit prompts
-- target-specific reproduction steps
-- private screenshots
-- institution-specific architecture
-- data that belongs to students, staff, or vendors
-
-## What Is Not Published
-
-- The original confidential PDF report
-- Target URLs, course IDs, tenant IDs, or organization names
-- Exploit prompts or copy-paste abuse strings
-- Screenshots from private systems
-- Student data, documents, names, academic records, or messages
-- Vendor credentials, tokens, headers, or internal endpoints
-
-## Portfolio Context
-
-This case study demonstrates AI security assessment and responsible reporting.
-It complements the defensive tooling projects in this profile by showing manual
-assessment work: defining scope, testing controls, documenting impact, and
-translating findings into remediation steps.
-
-## Responsible Disclosure Note
-
-The underlying assessment was performed in an authorized context and shared
-privately with the appropriate stakeholders. This public version is intentionally
-sanitized and should not be used as an exploit guide.
+The underlying assessment was authorized and reported privately. This version is
+for portfolio review and does not provide reproduction steps.

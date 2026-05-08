@@ -4,38 +4,32 @@ Use this wording instead of posting or attaching the confidential report.
 
 ## Project Title
 
-Sanitized AI/LMS Security Assessment Case Study
+AI/LMS Security Assessment Case Study
 
 ## Project Description
 
-Performed an authorized security assessment of an AI assistant embedded in a
-learning-management environment. The review focused on AI tool access, prompt
-and instruction hierarchy, user context exposure, retrieval boundaries, external
-request behavior, evidence handling, and safe remediation planning.
+Authorized assessment of an AI assistant embedded in a learning-management
+environment. I reviewed tool access, instruction hierarchy, LMS context exposure,
+retrieval boundaries, external request behavior, and remediation planning.
 
-The public GitHub version is intentionally sanitized. It does not include the
-confidential report, target URLs, exploit prompts, screenshots of private
-systems, student data, internal endpoints, or institution-specific details.
-
-The repository includes a public-safe assessment workflow, control matrix,
-redaction standard, and sanitized report template.
+The public GitHub version shows process and control thinking without publishing
+the private report, target details, exploit strings, screenshots, student data,
+or internal endpoints.
 
 ## LinkedIn Post Draft
 
-I published a sanitized case study from an authorized AI/LMS security assessment.
+I published a public case study from an authorized AI/LMS security assessment.
 
-The original report was delivered privately to the appropriate stakeholders. The
-public version focuses on the security lessons without exposing target details:
+The private report stayed private. The GitHub version focuses on what can be
+shared safely: scope, control questions, finding categories, remediation
+patterns, and redaction standards.
 
-- AI tool access needs clear policy, scoping, logging, and user-visible approval.
-- User-editable assistant instructions should not override system safety controls.
-- LMS user context becomes sensitive when automatically injected into AI sessions.
-- Retrieval systems need document ownership and course/role boundaries.
-- Findings are most useful when they translate into concrete remediation steps.
-- Public security writing should prove process without exposing private evidence.
+Main lessons:
 
-The goal was not to publish exploit strings or private screenshots. The goal was
-to show assessment process, risk reasoning, and responsible reporting.
+- AI tools need scoped access, logging, and user-visible approval.
+- User-editable instructions must not override system controls.
+- LMS context and retrieval data need explicit access boundaries.
+- Good security writing should help teams fix controls, not hand readers an exploit path.
 
 Project: https://github.com/srkyn/ai-lms-security-case-study
 

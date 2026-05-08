@@ -1,6 +1,6 @@
 # Security Policy
 
-This repository is a sanitized public case study. It intentionally excludes
+This repository is a sanitized public case study. It excludes
 target-specific details and exploit instructions.
 
 ## Reporting Concerns
