@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized AI/LMS security assessment summary</title>
+  <desc id="desc">A public-safe visual summary of an AI assistant security assessment in a learning-management environment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.58" stop-color="#172033"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="520" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <g transform="translate(70 62)">
+    <rect x="0" y="0" width="150" height="30" rx="4" fill="#60a5fa"/>
+    <text x="16" y="20" font-family="Consolas, monospace" font-size="14" font-weight="700" fill="#0f172a">CASE STUDY</text>
+    <text x="0" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="800" fill="#f8fafc">AI/LMS Security Assessment</text>
+    <rect x="0" y="108" width="560" height="5" fill="url(#accent)"/>
+    <text x="0" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#cbd5e1">Authorized review of an AI assistant embedded in a learning-management environment.</text>
+  </g>
+
+  <g transform="translate(72 248)" font-family="Segoe UI, Arial, sans-serif">
+    <g>
+      <rect x="0" y="0" width="220" height="120" rx="8" fill="#1f2937" stroke="#475569"/>
+      <text x="22" y="34" font-size="18" font-weight="700" fill="#f8fafc">Tool Access</text>
+      <text x="22" y="66" font-size="14" fill="#cbd5e1">Outbound requests,</text>
+      <text x="22" y="88" font-size="14" fill="#cbd5e1">API scope, logging</text>
+    </g>
+    <g transform="translate(250 0)">
+      <rect x="0" y="0" width="220" height="120" rx="8" fill="#1f2937" stroke="#475569"/>
+      <text x="22" y="34" font-size="18" font-weight="700" fill="#f8fafc">Instruction Control</text>
+      <text x="22" y="66" font-size="14" fill="#cbd5e1">Prompt hierarchy,</text>
+      <text x="22" y="88" font-size="14" fill="#cbd5e1">editable settings</text>
+    </g>
+    <g transform="translate(500 0)">
+      <rect x="0" y="0" width="220" height="120" rx="8" fill="#1f2937" stroke="#475569"/>
+      <text x="22" y="34" font-size="18" font-weight="700" fill="#f8fafc">Data Boundaries</text>
+      <text x="22" y="66" font-size="14" fill="#cbd5e1">User context, files,</text>
+      <text x="22" y="88" font-size="14" fill="#cbd5e1">shared knowledge</text>
+    </g>
+    <g transform="translate(750 0)">
+      <rect x="0" y="0" width="220" height="120" rx="8" fill="#1f2937" stroke="#475569"/>
+      <text x="22" y="34" font-size="18" font-weight="700" fill="#f8fafc">Reporting</text>
+      <text x="22" y="66" font-size="14" fill="#cbd5e1">Impact, evidence,</text>
+      <text x="22" y="88" font-size="14" fill="#cbd5e1">remediation</text>
+    </g>
+  </g>
+
+  <g transform="translate(72 424)" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#94a3b8">
+    <text x="0" y="0">Public-safe version: no target URLs, exploit prompts, screenshots, student data, internal endpoints, or confidential report content.</text>
+  </g>
+</svg>
