@@ -10,6 +10,8 @@ details.
 
 ![Sanitized assessment summary](docs/assets/ai-lms-assessment-summary.svg)
 
+![Sanitized assessment workflow](docs/assets/assessment-workflow.svg)
+
 ## Summary
 
 The assessment reviewed an AI assistant embedded in an LMS course environment.
@@ -19,6 +21,14 @@ instructions, external requests, uploaded files, and stored knowledge.
 The private report was delivered to the authorized stakeholders. This public
 case study preserves the security lessons while removing operational details
 that could identify or expose the environment.
+
+## Repository Contents
+
+- [Assessment workflow](docs/assessment-workflow.md)
+- [Control matrix](docs/control-matrix.md)
+- [Public redaction standard](docs/redaction-standard.md)
+- [Sanitized report template](docs/report-template.md)
+- [LinkedIn-safe project copy](LINKEDIN.md)
 
 ## What Was Assessed
 
@@ -90,6 +100,25 @@ with additional checks for:
 - Add document-level ownership and course-section scoping to AI retrieval.
 - Review generated messages before sending from a trusted identity or platform session.
 - Add security regression tests for prompt injection, tool misuse, and data boundary failures.
+
+## Public Artifact Boundary
+
+The public case study is intentionally narrower than the private report. It is
+meant to show:
+
+- assessment planning
+- control thinking
+- risk communication
+- remediation structure
+- responsible redaction
+
+It is not meant to show:
+
+- exploit prompts
+- target-specific reproduction steps
+- private screenshots
+- institution-specific architecture
+- data that belongs to students, staff, or vendors
 
 ## What Is Not Published
 

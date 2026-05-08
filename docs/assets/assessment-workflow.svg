@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">AI/LMS assessment workflow</title>
+  <desc id="desc">A sanitized assessment workflow showing scope, reconnaissance, control testing, evidence handling, reporting, and remediation.</desc>
+  <rect width="1200" height="360" rx="10" fill="#0f172a"/>
+  <text x="60" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="800" fill="#f8fafc">Assessment Workflow</text>
+  <text x="60" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#94a3b8">Public-safe summary of how the AI/LMS review was structured.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <g transform="translate(60 150)">
+      <rect width="150" height="82" rx="8" fill="#1e293b" stroke="#475569"/>
+      <text x="20" y="34" font-size="17" font-weight="700" fill="#f8fafc">Scope</text>
+      <text x="20" y="58" font-size="13" fill="#cbd5e1">approved surfaces</text>
+    </g>
+    <g transform="translate(250 150)">
+      <rect width="150" height="82" rx="8" fill="#1e293b" stroke="#475569"/>
+      <text x="20" y="34" font-size="17" font-weight="700" fill="#f8fafc">Recon</text>
+      <text x="20" y="58" font-size="13" fill="#cbd5e1">tools, context, RAG</text>
+    </g>
+    <g transform="translate(440 150)">
+      <rect width="150" height="82" rx="8" fill="#1e293b" stroke="#475569"/>
+      <text x="20" y="34" font-size="17" font-weight="700" fill="#f8fafc">Controls</text>
+      <text x="20" y="58" font-size="13" fill="#cbd5e1">abuse cases</text>
+    </g>
+    <g transform="translate(630 150)">
+      <rect width="150" height="82" rx="8" fill="#1e293b" stroke="#475569"/>
+      <text x="20" y="34" font-size="17" font-weight="700" fill="#f8fafc">Evidence</text>
+      <text x="20" y="58" font-size="13" fill="#cbd5e1">private report only</text>
+    </g>
+    <g transform="translate(820 150)">
+      <rect width="150" height="82" rx="8" fill="#1e293b" stroke="#475569"/>
+      <text x="20" y="34" font-size="17" font-weight="700" fill="#f8fafc">Report</text>
+      <text x="20" y="58" font-size="13" fill="#cbd5e1">impact and fixes</text>
+    </g>
+    <g transform="translate(1010 150)">
+      <rect width="150" height="82" rx="8" fill="#1e293b" stroke="#475569"/>
+      <text x="20" y="34" font-size="17" font-weight="700" fill="#f8fafc">Retest</text>
+      <text x="20" y="58" font-size="13" fill="#cbd5e1">verify controls</text>
+    </g>
+  </g>
+
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M212 191 H242"/>
+    <path d="M402 191 H432"/>
+    <path d="M592 191 H622"/>
+    <path d="M782 191 H812"/>
+    <path d="M972 191 H1002"/>
+  </g>
+
+  <text x="60" y="305" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#94a3b8">Private evidence stayed private. Public artifacts preserve control lessons and remediation structure.</text>
+</svg>

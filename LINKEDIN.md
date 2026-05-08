@@ -11,11 +11,14 @@ Sanitized AI/LMS Security Assessment Case Study
 Performed an authorized security assessment of an AI assistant embedded in a
 learning-management environment. The review focused on AI tool access, prompt
 and instruction hierarchy, user context exposure, retrieval boundaries, external
-request behavior, and safe remediation planning.
+request behavior, evidence handling, and safe remediation planning.
 
 The public GitHub version is intentionally sanitized. It does not include the
 confidential report, target URLs, exploit prompts, screenshots of private
 systems, student data, internal endpoints, or institution-specific details.
+
+The repository includes a public-safe assessment workflow, control matrix,
+redaction standard, and sanitized report template.
 
 ## LinkedIn Post Draft
 
@@ -29,6 +32,7 @@ public version focuses on the security lessons without exposing target details:
 - LMS user context becomes sensitive when automatically injected into AI sessions.
 - Retrieval systems need document ownership and course/role boundaries.
 - Findings are most useful when they translate into concrete remediation steps.
+- Public security writing should prove process without exposing private evidence.
 
 The goal was not to publish exploit strings or private screenshots. The goal was
 to show assessment process, risk reasoning, and responsible reporting.
