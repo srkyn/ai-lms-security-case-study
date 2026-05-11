@@ -3,9 +3,11 @@
 Public case study from an authorized assessment of an AI assistant embedded in a
 learning-management environment.
 
-The confidential report stays private. This repository keeps the reusable parts:
-scope, control questions, finding categories, remediation patterns, and redaction
-discipline.
+The private deliverable was a 24-page confidential report produced in May 2026.
+It documented 16 validated findings from a standard-user session and translated
+the evidence into remediation guidance. The confidential report stays private.
+This repository keeps only the reusable parts: scope, control questions, finding
+categories, remediation patterns, and redaction discipline.
 
 ![Assessment summary](docs/assets/ai-lms-assessment-summary.svg)
 
@@ -15,6 +17,7 @@ discipline.
 - Which control areas I tested
 - How findings were translated into remediation
 - How portfolio evidence can be shared without exposing private systems
+- How to show meaningful assessment work while respecting disclosure boundaries
 
 ## Assessment Areas
 
@@ -49,6 +52,22 @@ discipline.
 - Make safety controls admin-owned, default-on, and covered by regression tests.
 - Scope LMS retrieval by owner, course, role, section, and document sensitivity.
 - Review generated messages before sending from a trusted identity.
+
+## Private Report Structure
+
+The private report followed a formal assessment format:
+
+- executive summary and risk summary
+- scope, authorization context, and methodology
+- target reconnaissance from a standard-user session
+- detailed findings with severity, evidence, impact, and remediation guidance
+- attack-chain narrative showing how multiple control weaknesses could combine
+- screenshot evidence index for private remediation teams
+- assessor declaration and disclosure boundary
+
+The public repository does not include exploit strings, screenshots, target URLs,
+student data, internal hostnames, API paths, tokens, headers, or reproduction
+steps.
 
 ## Public Boundary
 

@@ -6,11 +6,13 @@ AI/LMS Security Assessment Case Study
 
 Authorized assessment of an AI assistant embedded in a learning-management
 environment. I reviewed tool access, instruction hierarchy, LMS context exposure,
-retrieval boundaries, external request behavior, and remediation planning.
+retrieval boundaries, external request behavior, memory behavior, messaging
+authority, evidence handling, and remediation planning.
 
-The public GitHub version is the shareable version of the work: enough process
-and control thinking to be useful, without publishing the private report, target
-details, exploit strings, screenshots, student data, or internal endpoints.
+The private deliverable was a confidential 24-page report with 16 validated
+findings. The public GitHub version is the shareable version of the work: enough
+process and control thinking to be useful, without publishing the private report,
+target details, exploit strings, screenshots, student data, or internal endpoints.
 
 ## LinkedIn Post Draft
 
@@ -22,7 +24,7 @@ access, act on, or reveal from a normal user session?
 
 The private report stayed private. The GitHub version focuses on what can be
 shared safely: scope, control questions, finding categories, remediation
-patterns, and redaction standards.
+patterns, evidence-handling standards, and redaction boundaries.
 
 Main lessons:
 
