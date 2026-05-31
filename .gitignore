@@ -2,6 +2,11 @@
 Thumbs.db
 *.pdf
 *.docx
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+*.webp
 confidential/
 private/
 evidence/

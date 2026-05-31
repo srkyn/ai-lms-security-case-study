@@ -1,13 +1,13 @@
 # AI/LMS Security Assessment Case Study
 
-Public case study from an authorized assessment of an AI assistant embedded in a
-learning-management environment.
+Public-safe case study from an authorized assessment of an AI assistant embedded
+in a learning-management environment.
 
 The private deliverable was a 24-page confidential report produced in May 2026.
 It documented 16 validated findings from a standard-user session and translated
 the evidence into remediation guidance. The confidential report stays private.
 This repository keeps only the reusable parts: scope, control questions, finding
-categories, remediation patterns, and redaction discipline.
+categories, remediation patterns, narrative lessons, and redaction discipline.
 
 ![Assessment summary](docs/assets/ai-lms-assessment-summary.svg)
 
@@ -18,6 +18,22 @@ categories, remediation patterns, and redaction discipline.
 - How findings were translated into remediation
 - How portfolio evidence can be shared without exposing private systems
 - How to show meaningful assessment work while respecting disclosure boundaries
+
+## The Short Version
+
+The interesting part was not one dramatic bug. It was the combination: an AI
+assistant with tools, memory, document retrieval, LMS context, user-editable
+behavior, and permissive defaults.
+
+Individually, each issue was fixable. Together, they created a path where a
+normal user could influence assistant behavior, expose internal details, and
+potentially move AI-visible data outside the trusted environment.
+
+That is the real lesson: AI security is not just prompt filtering. It is tool
+permissions, default settings, data boundaries, auditability, memory isolation,
+document ingestion, and the boring-but-vital question:
+
+> What can this assistant touch when a normal user gets clever?
 
 ## Assessment Areas
 
@@ -69,12 +85,35 @@ The public repository does not include exploit strings, screenshots, target URLs
 student data, internal hostnames, API paths, tokens, headers, or reproduction
 steps.
 
+## Finding Themes
+
+| ID | Theme | Severity |
+|---|---|---|
+| F-01 | Unrestricted outbound requests from AI tools | Critical |
+| F-02 | User-editable high-priority instructions | Critical |
+| F-03 | Safety/context bypass exposed in assistant settings | Critical |
+| F-04 | Assistant disclosed its own attack surface | Critical |
+| F-05 | LMS API calls attempted from assistant tooling | High |
+| F-06 | Cloud command proxy behavior indicated by tool errors | High |
+| F-07 | Broad tool access enabled by default | High |
+| F-08 | External response content influenced chat context | High |
+| F-09 | User context auto-injected into AI sessions | Medium |
+| F-10 | Persistent memory checked automatically | Medium |
+| F-11 | Uploaded and fetched documents entered AI context | Medium |
+| F-12 | Lab-style framing produced risky command guidance | Medium |
+| F-13 | Platform and architecture details disclosed | Informational |
+| F-14 | Internal prompt/configuration details exposed | Critical |
+| F-15 | Email tool presented phishing/impersonation risk | High |
+| F-16 | Personal documents appeared in shared knowledge base | High |
+
 ## Public Boundary
 
 Published:
 
 - Assessment workflow
 - Control matrix
+- Redacted narrative report
+- Remediation playbook
 - Redaction standard
 - Sanitized report template
 - LinkedIn-ready project copy
@@ -88,9 +127,12 @@ Withheld:
 
 ## Documents
 
+- [Redacted narrative report](docs/redacted-report.md)
+- [Remediation playbook](docs/remediation-playbook.md)
 - [Assessment workflow](docs/assessment-workflow.md)
 - [Control matrix](docs/control-matrix.md)
 - [Public redaction standard](docs/redaction-standard.md)
+- [Redaction notes](docs/redaction-notes.md)
 - [Sanitized report template](docs/report-template.md)
 - [LinkedIn project copy](LINKEDIN.md)
 
