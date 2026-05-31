@@ -1,12 +1,12 @@
 # AI/LMS Security Assessment Case Study
 
-Public-safe case study from an authorized assessment of an AI assistant embedded
+This is a public-safe case study from an authorized assessment of an AI assistant embedded
 in a learning-management environment.
 
 The private deliverable was a 24-page confidential report produced in May 2026.
 It documented 16 validated findings from a standard-user session and translated
 the evidence into remediation guidance. The confidential report stays private.
-This repository keeps only the reusable parts: scope, control questions, finding
+This repository keeps the reusable parts: scope, control questions, finding
 categories, remediation patterns, narrative lessons, and redaction discipline.
 
 ![Assessment summary](docs/assets/ai-lms-assessment-summary.svg)
